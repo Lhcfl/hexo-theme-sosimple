@@ -53,10 +53,13 @@ jobs:
           cd ~/unit_test
           npx hexo g -b
 
+      - name: Echo Home
+        run: echo $HOME
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ~/unit_test/public
+          path: /home/runner/unit_test/public
 
   # 部署工作
   deploy:
