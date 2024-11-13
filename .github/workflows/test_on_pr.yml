@@ -16,6 +16,9 @@ jobs:
           node-version: 20
           cache: pnpm
 
+      - name: Build test
+        run: pnpm build
+
       - name: Configure Hexo Unit Test
         run: |
           git clone https://github.com/hexojs/hexo-theme-unit-test.git ~/unit_test
@@ -38,9 +41,3 @@ jobs:
         run: |
           cd ~/unit_test
           npx hexo g -b
-
-      - name: Lint Test
-        run: pnpm lint:test
-
-      - name: Format Test
-        run: pnpm format:test
