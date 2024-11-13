@@ -7,7 +7,7 @@
     "format:biome": "biome format --write includes languages scripts source src .",
     "lint": "biome lint --write includes languages scripts source src .",
     "lint:test": "biome lint includes languages scripts source src .",
-    "format:test": "biome format includes languages scripts source src . && prettier -c ./{layout,src}/**/*.{pug,scss} && prettier --write ./*.{yml,md}",
+    "format:test": "biome format includes languages scripts source src . && prettier -c ./{layout,src}/**/*.{pug,scss}",
     "format": "pnpm format:biome && pnpm format:pretty",
     "watch": "rollup -w -c ./rollup.config.mjs",
     "build": "rollup -c ./rollup.config.mjs"

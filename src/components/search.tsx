@@ -1,7 +1,7 @@
 import './search.scss';
 import Fuse, { type FuseResult } from 'fuse.js';
 import { SoSimpleDynamicResource } from '@/sosimple/dynamic-resource';
-import { SoSimpleRef } from '@/SoSimple/ref';
+import { SoSimpleRef } from '@/sosimple/ref';
 import { escapeHTML, nextTick } from '@/utils/main';
 import { Component } from './base';
 import { router } from '@/sosimple/router';
