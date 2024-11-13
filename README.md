@@ -2,7 +2,9 @@
 
 ## So Simple!
 
-致力于纯粹的 HTML
+Live Demo: https://lhcfl.github.io/hexo-theme-sosimple/
+
+超级干净的，致力于尽可能少写 CSS 的原汁原味 HTML 风格主题。
 
 ## Install
 
