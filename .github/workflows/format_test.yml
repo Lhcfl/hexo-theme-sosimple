@@ -1,0 +1,29 @@
+name: Format Test for Pull Requests
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  push:
+    branches:
+      - main
+
+jobs:
+  format_test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install
+        run: pnpm i
+
+      - name: Lint Test
+        run: pnpm lint:test
+
+      - name: Format Test
+        run: pnpm format:test

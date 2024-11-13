@@ -40,8 +40,8 @@ jobs:
           pnpm i
           cd /home/runner/work/hexo-theme-sosimple/hexo-theme-sosimple
           cp ./_config.example.yml ~/unit_test/themes/SoSimple/_config.yml
-          cp ./.github/asserts/hexo_config.yml ~/unit_test/_config.yml
-          cp ./.github/asserts/_posts/* ~/unit_test/source/_posts/
+          cp ./.github/assets/hexo_config.yml ~/unit_test/_config.yml
+          cp ./.github/assets/_posts/* ~/unit_test/source/_posts/
           cd ~/unit_test
           npm install
           npm install hexo-renderer-pug --save
