@@ -1,0 +1,34 @@
+# Blog config
+keywords: Blog,博客,Hexo
+author: Lhcfl
+description: Welcome to use SoSimple!
+defaultTheme: light-mode
+
+# icon
+# 如果尺寸不当请修改style.styl
+favicon: /images/logo.png
+avatar: /images/logo.png
+logo_dir: /images/logo.png
+logo_style: width:250px;
+
+# Nav menu
+menu:
+  Home: /
+  Archives: /archives
+  Tags: /tags
+  About: /about
+  Links: /links
+  Search: /search
+  Dark/Light Mode: javascript:SoSimple.darkLightToggle()
+
+footer:
+  text:
+  html:
+  enable_powered_by: true
+
+style:
+  post_excerpt:
+    summary_mode: false
+  post_meta:
+    date_format: 'YYYY-MM-DD'
+    show_icon: true

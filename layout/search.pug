@@ -1,0 +1,16 @@
+extends main
+
+block site_title
+  != __("Search") + " · " + config.title
+
+block content
+  script
+    != 'SoSimple.searchInit({translation:{posts:"' + __("insight.posts") + '",pages:"' + __("insight.pages") + '",categories:"' + __("insight.categories") + '",tags:"' + __("insight.tags") + '",untitled:"' + __("insight.untitled") + '",} });'
+  .content
+    h1= __("Search")
+  .searchbox.ins-search.modal-cover
+    .searchbox-container.ins-search-container.modal-container
+      .searchbox-input-wrapper
+        input.searchbox-input.ins-search-input(type="text", placeholder=__("insight.hint"))
+      .searchbox-result-wrapper.ins-section-wrapper
+        .ins-section-container

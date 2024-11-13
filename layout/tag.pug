@@ -1,0 +1,16 @@
+extends main
+
+block site_title
+  != __("Tags") + " · " + page.tag + " · " + config.title
+
+block description
+  - var desc = __("Tags") + " · " + page.tag + " - " + config.title;
+  meta(name="description", content=desc)
+
+block content
+  .content
+    .archive
+      h1= __("Tags") + " · " + page.tag
+      include mixins
+      +make_post_list
+      +make_pager(__('prev'), __('next'))

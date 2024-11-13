@@ -1,0 +1,20 @@
+doctype
+html
+  head
+    include partial/head
+
+  body
+    include partial/nav
+    .main.animated.fadeInDown
+      block content
+    footer.footer
+      if theme.footer.html
+        p!= theme.footer.html
+      if theme.footer.text
+        p= theme.footer.text
+
+      .powered_by
+        span Powered by&nbsp;
+        a(href="https://hexo.io/zh-cn/", target="_blank") Hexo
+        span &nbsp;and
+        a(href="https://github.com/Lhcfl/hexo-theme-sosimple", target="_blank") &nbsp;SoSimple

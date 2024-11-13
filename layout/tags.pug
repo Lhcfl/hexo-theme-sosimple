@@ -1,0 +1,21 @@
+extends main
+
+block site_title
+  != __("Tags") + " · " + config.title
+
+block description
+  - var desc = page.desc || strip_html(page.content).replace(/^\s*/, "").replace(/\s*$/, "").substring(0, 150);
+  meta(name="description", content=desc)
+
+block content
+  .content
+    .archive
+      h1= __("Tags")
+      - var alp_tags = alphabet_tag_list(site.tags);
+      each t in alp_tags
+        h2!= t.alphabet
+        each tag in t.tags
+          p
+            a(href=url_for(tag.path))!= tag.name
+            span &nbsp;×&nbsp;
+            span!= tag.length

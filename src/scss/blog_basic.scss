@@ -1,0 +1,143 @@
+// =====================================
+// Color, font and margin
+// =====================================
+
+@import './color-defination.scss';
+
+:root {
+  --mono-font-face: 'mononoki', 'Consolas', 'Roboto Mono', 'Lucida Console', 'Trebuchet MS', 'Courier New', 'courier',
+    monospace;
+}
+
+body {
+  padding: 1em;
+  line-height: 1.6em;
+  font-family: 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif JP', 'Noto Serif KR', 'Noto Serif', 'Times New Roman',
+    Times, serif;
+  font-size: 15px;
+  color: var(--primary);
+  background-color: var(--secondary);
+}
+
+a {
+  color: var(--tertiary);
+
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  line-height: 1.9em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  margin: 1rem 0;
+  &,
+  * {
+    color: var(--primary);
+  }
+}
+
+h1 {
+  font-size: 2.1rem;
+  line-height: 1.2em;
+}
+
+h2 {
+  font-size: 1.75rem;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h6 {
+  font-size: 1.1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p,
+ul,
+ol,
+dl {
+  margin: 1em 0;
+}
+
+ol,
+ul {
+  ol,
+  ul {
+    margin: 0.4em 0;
+  }
+}
+
+hr {
+  border-color: var(--secondary-500);
+}
+
+blockquote {
+  box-sizing: border-box;
+  margin: 1.6em 0 1.6em 0em;
+  padding: 0 0 0 1.6em;
+  border-left: #f66 0.3em solid;
+}
+
+code,
+tt {
+  padding: 1px 3px;
+  font-family: var(--mono-font-face);
+  white-space: pre-wrap;
+  background-color: var(--secondary-950);
+  color: var(--primary-700);
+  border-radius: 3px;
+}
+
+pre {
+  font-family: var(--mono-font-face);
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 8px;
+  border: var(--primary-200) 1px solid;
+  color: var(--primary-800);
+}
+
+table {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 1em 0;
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+  td,
+  th {
+    border: 1px solid var(--primary-300);
+    padding: 3px 5px;
+  }
+}
+
+// .katex .katex-html {
+//   display: none;
+// }

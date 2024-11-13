@@ -1,0 +1,16 @@
+extends main
+
+block site_title
+  != page.category + " · " + config.title
+
+block description
+  - var desc = __("Categories") + " · " + page.category + " - " + config.title;
+  meta(name="description", content=desc)
+
+block content
+  .content
+    .archive
+      h1= __("Categories") + " · " + page.category
+      include mixins
+      +make_post_list
+      +make_pager(__('prev'), __('next'))
