@@ -1,3 +1,4 @@
+export { loadCSS } from './load-css';
 export { h } from './jsx-runtime';
 
 export function nextTick(fn: () => void) {
