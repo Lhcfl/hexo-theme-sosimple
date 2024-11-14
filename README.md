@@ -19,7 +19,7 @@ Live Demo: https://lhcfl.github.io/hexo-theme-sosimple/
 ## Install
 
 ```bash
-git clone https://gitee.com/Lhcfl/hexo-theme-sosimple.git themes/SoSimple
+git clone https://github.com/Lhcfl/hexo-theme-sosimple.git themes/SoSimple
 cd themes/SoSimple
 pnpm i # You must do this
 ```
