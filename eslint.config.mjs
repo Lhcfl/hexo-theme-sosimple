@@ -12,4 +12,11 @@ export default [
       },
     },
   },
+  {
+    ignores: [
+      "node_modules",
+      "**/*.min.js",
+      "**/bundle.*",
+    ]
+  }
 ];

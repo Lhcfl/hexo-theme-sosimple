@@ -19,6 +19,13 @@ mixin make_post_full(item)
   .post-container.post-full
     .post-title
       h1= item.title
+
+    if item.toc && theme.toc_max_depth > 0
+      .post-toc
+        details.ltr(open)
+          summary= __("TOC")
+          .toc!= toc(item.content, { class: "toclist", list_number: false, max_depth: theme.toc_max_depth })
+
     .post-body!= item.content
     .post-meta
       +make_post_info(item)

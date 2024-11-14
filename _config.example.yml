@@ -1,7 +1,7 @@
 # Blog config
-keywords: Blog,博客,Hexo
-author: Lhcfl
-description: Welcome to use SoSimple!
+keywords: Blog,Article
+author: Your Name
+description: A So Simple Blog
 defaultTheme: light-mode
 
 # icon
@@ -20,6 +20,8 @@ menu:
   Links: /links
   Search: /search
   Dark/Light Mode: javascript:SoSimple.darkLightToggle()
+
+toc_max_depth: 6
 
 footer:
   text:

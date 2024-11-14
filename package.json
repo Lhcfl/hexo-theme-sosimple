@@ -5,8 +5,9 @@
   "scripts": {
     "format:pretty": "prettier --write ./{layout,src}/**/*.{pug,scss} && prettier --write ./*.{yml,md}",
     "format:biome": "biome format --write includes languages scripts source src .",
-    "lint": "biome lint --write includes languages scripts source src .",
-    "lint:test": "biome lint includes languages scripts source src .",
+    "lint": "biome lint --write includes languages scripts source src . && eslint --fix .",
+    "lint:test": "biome lint includes languages scripts source src . && eslint . && pnpm types:check",
+    "types:check": "tsc --noEmit",
     "format:test": "biome format includes languages scripts source src . && prettier -c ./{layout,src}/**/*.{pug,scss}",
     "format": "pnpm format:biome && pnpm format:pretty",
     "watch": "rollup -w -c ./rollup.config.mjs",
@@ -25,6 +26,7 @@
     "@swc/core": "^1.7.23",
     "eslint": "^9.4.0",
     "fuse.js": "^7.0.0",
+    "globals": "^15.12.0",
     "prettier": "^3.3.1",
     "unplugin-swc": "^1.5.1"
   },

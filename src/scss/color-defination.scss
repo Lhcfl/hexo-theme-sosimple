@@ -28,7 +28,7 @@
 @mixin lightTheme() {
   $primary: 22 22 22;
   $secondary: 255 255 255;
-  $tertiary: 71 134 214;
+  $tertiary: 62 82 214;
   @include genColor('primary', $primary, $secondary);
   @include genColor('secondary', $secondary, $primary);
   @include genColor('tertiary', $tertiary, $secondary);

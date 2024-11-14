@@ -11,11 +11,16 @@ block content
   .content
     .archive
       h1= __("Tags")
-      - var alp_tags = alphabet_tag_list(site.tags);
-      each t in alp_tags
-        h2!= t.alphabet
-        each tag in t.tags
-          p
-            a(href=url_for(tag.path))!= tag.name
-            span &nbsp;×&nbsp;
-            span!= tag.length
+      - let last_cat = "";
+      - const sorted_tags = site.tags.data.sort((a, b) => (a.name < b.name ? -1 : 1));
+      - const in_cat = (tag) => (/^[0-9]/.test(tag.name) ? "0-9" : /^[a-zA-Z]/.test(tag.name) ? tag.name[0].toUpperCase() : "#");
+      - const tags = {};
+      each tag in sorted_tags
+        if last_cat != in_cat(tag)
+          - last_cat = in_cat(tag);
+          h3!= in_cat(tag)
+        span
+          a(href=url_for(tag.path))!= tag.name
+          span &nbsp;×&nbsp;
+          span!= tag.length
+          span &nbsp;&nbsp;&nbsp;

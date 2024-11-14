@@ -5,6 +5,13 @@
 }
 
 figure.highlight {
+  figcaption {
+    padding: 5px 10px 0 0;
+    font-size: 0.8em;
+    line-height: 1em;
+    font-family: var(--mono-font-face);
+    opacity: 0.7;
+  }
   position: relative !important;
   margin: 1em 0 !important;
   border-radius: 2px !important;
@@ -832,12 +839,6 @@ figure.highlight {
   &.pine,
   &.pinescript {
     @include mixcontent('Pine Script');
-  }
-
-  &.plaintext,
-  &.txt,
-  &.text {
-    @include mixcontent('Plaintext');
   }
 
   &.pony {

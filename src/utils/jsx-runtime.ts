@@ -1,3 +1,4 @@
+// biome-ignore lint/suspicious/noExplicitAny: <explanation>
 type Attrs = Record<string, any> | null;
 
 type ContentNode = string | HTMLElement | null | undefined;

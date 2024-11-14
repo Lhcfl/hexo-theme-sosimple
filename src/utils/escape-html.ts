@@ -1,4 +1,4 @@
-export function escapeHTML(str: any) {
+export function escapeHTML(str?: string | number | null) {
   return String(str).replace(
     /[&<>'"]/g,
     (tag) =>

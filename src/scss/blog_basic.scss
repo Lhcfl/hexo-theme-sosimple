@@ -105,12 +105,9 @@ blockquote {
 
 code,
 tt {
-  padding: 1px 3px;
   font-family: var(--mono-font-face);
   white-space: pre-wrap;
-  background-color: var(--secondary-950);
-  color: var(--primary-700);
-  border-radius: 3px;
+  background-color: rgba(var(--primary-rgb), 0.01);
 }
 
 pre {
