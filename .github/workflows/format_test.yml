@@ -1,4 +1,4 @@
-name: Format Test for Pull Requests
+name: Format and Lint
 
 on:
   pull_request:
