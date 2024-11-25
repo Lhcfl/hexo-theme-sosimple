@@ -62,12 +62,13 @@ html
       block content
 
     footer.footer
+      br
       if theme.footer.html
         p!= theme.footer.html
       if theme.footer.text
         p= theme.footer.text
       if theme.footer.enable_powered_by
-        .powered_by
+        p.powered_by
           span Powered by&nbsp;
           a(href="https://hexo.io/zh-cn/", target="_blank") Hexo
           span &nbsp;and
