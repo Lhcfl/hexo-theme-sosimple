@@ -8,13 +8,11 @@
 
 Live Demo: https://lhcfl.github.io/hexo-theme-sosimple/
 
-[![Build](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml) [![Format](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml)
+[![Build](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml) [![Format](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml) [中文](./README_zh.md)
 
-超级干净的，致力于尽可能少写 CSS，展现原汁原味的 HTML 风格主题。
+Super clean theme, aiming to write as little CSS as possible and show the original HTML style. The theme is optimized for no CSS and no JavaScript to ensure that it can be displayed normally under pure HTML. You can even just copy the entire page and paste it into a Markdown editor with the nice formatting kept :\).
 
-简约但现代化，功能齐全。
-
-支持自动生成 TOC、内置全文搜索、亮色-暗色模式切换。
+Simple but modern, full-featured. Supports automatic generating TOC, built-in full-text fuzzy search, dark/light mode switching etc.
 
 ## Install
 
@@ -24,48 +22,35 @@ cd themes/SoSimple
 pnpm i # You must do this
 ```
 
-### 配置
+### Configuration
 
-复制`_config.example.yml`为`_config.yml`  
-修改hexo根目录下的 `_config.yml` ： `theme: SoSimple`
+copy `_config.example.yml` to `_config.yml` and edit it.
 
-### 更新、
+Change your hexo config: `theme: SoSimple`
 
-在SoSimple的目录下
+### Update
 
 ```bash
 git pull origin main
 ```
 
-## 开发
+## Development
 
-### 准备工作
+- `.github`: GitHub CI config file
+- `includes`: Hexo scripts
+- `languages`: I18n files
+- `layout`: Pug templates, will render to HTML
+- `scripts`: Hexo scripts
+- `source`: HTML assets
+- `src`: Typescript and SCSS source dir. It will `rollup` into `js/complied/bundle.js` and `bundle.css`
 
-进入SoSimple的目录，执行
+### Formatting
 
-```bash
-pnpm i
-```
-
-安装所有依赖。
-
-### 目录结构
-
-- `.github`: GitHub 的 CI 配置文件，用于自动部署样例
-- `includes`: 主题内置的 Hexo 脚本
-- `languages`: I18n 文件
-- `layout` 主题使用的模板，在服务端（也就是 `hexo g`）渲染成最后的 HTML
-- `scripts`: 主题内置的 Hexo 脚本
-- `source`: 主题需要的HTML资产
-- `src`: 主题前端相关的 typescript 脚本。这些脚本会被 `rollup` 打包并压缩成一个 `js/complied/bundle.js` 和 `bundle.css`
-
-### 代码格式化
-
-对本主题做出修改后，使用下面的命令可以对代码进行格式化
+After modifying the theme file, you can format it with the following command:
 
 ```bash
 pnpm format
 pnpm lint
 ```
 
-详见 `package.json`
+See `package.json`
