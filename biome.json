@@ -23,6 +23,9 @@
       },
       "suspicious": {
         "noExplicitAny": "warn"
+      },
+      "complexity": {
+        "noForEach": "off"
       }
     },
     "ignore": ["**/*.min.js", "**/*.min.css", "source/js_complied"]
