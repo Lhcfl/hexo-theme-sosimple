@@ -5,13 +5,6 @@
 }
 
 figure.highlight {
-  figcaption {
-    padding: 5px 10px 0 0;
-    font-size: 0.8em;
-    line-height: 1em;
-    font-family: var(--mono-font-face);
-    opacity: 0.7;
-  }
   position: relative !important;
   margin: 1em 0 !important;
   border-radius: 2px !important;
@@ -19,6 +12,14 @@ figure.highlight {
   background-color: var(--secondary-950) !important;
   overflow-x: auto !important;
   padding-left: 1em;
+
+  figcaption {
+    padding: 5px 10px 0 0;
+    font-size: 0.8em;
+    line-height: 1em;
+    font-family: var(--mono-font-face);
+    opacity: 0.7;
+  }
 
   table,
   tr,
