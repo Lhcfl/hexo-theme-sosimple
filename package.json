@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "hexo-renderer-pug": "^0.0.5",
     "rollup": "^4.21.2",
     "rollup-plugin-sass": "^1.13.2",
     "typescript": "^5.5.4"

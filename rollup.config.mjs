@@ -29,4 +29,28 @@ export default defineConfig([
       }),
     ],
   },
+  {
+    input: "layout_src/index.tsx",
+    output: {
+      name: "index.jsx",
+      file: "layout/index.jsx",
+      format: "cjs",
+    },
+    plugins: [
+      resolve(),
+      swc.rollup({
+        jsc: {
+          baseUrl: import.meta.dirname || '.',
+          paths: {
+            '@/*': ['./layout_src/*'],
+          },
+          transform: {
+            react: {
+              pragma: "h"
+            }
+          }
+        },
+      }),
+    ]
+  }
 ]);
