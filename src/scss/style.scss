@@ -5,10 +5,6 @@ i.fa {
   color: var(--primary-low-mid);
 }
 
-nav a {
-  margin-right: 5px;
-}
-
 body {
   margin: auto;
   max-width: 780px;
@@ -18,12 +14,6 @@ body {
   .post-meta {
     font-size: 0.9em;
     opacity: 80%;
-    & > .info {
-      margin-right: 5px;
-      & > i {
-        margin-right: 3px;
-      }
-    }
   }
   &.post-excerpt,
   &.index-post {

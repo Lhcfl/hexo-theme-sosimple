@@ -3,7 +3,9 @@ mixin make_post_info(item)
     span.info
       if theme.style.post_meta.show_icon
         i(class="fa " + icon)
+        span &nbsp;
       block
+      span &nbsp;&nbsp;
   +with_icon("fa-calendar")
     span.date= date(item.date, theme.style.post_meta.date_format)
   if item.categories
@@ -42,9 +44,11 @@ mixin make_post_excerpt(item)
 mixin make_pager
   - var prev = page.prev_link;
   - var next = page.next_link;
-  .pagination
+  p.pagination
     if page.prev
       a.btn(role="navigation", href=url_for(prev))= __("prev")
+    if page.prev && page.next
+      span &nbsp;&nbsp;
     if page.next
       a.btn(role="navigation", href=url_for(next))= __("next")
 

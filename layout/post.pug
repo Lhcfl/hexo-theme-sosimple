@@ -15,8 +15,10 @@ block content
     +make_post_full(page)
     - var prev = page.prev ? page.prev.path : false;
     - var next = page.next ? page.next.path : false;
-    .pagination
+    p.pagination
       if prev
         a.btn(role="navigation", href=url_for(prev), title=page.prev.title)!= __("prev_post")
+      if prev && next
+        span &nbsp;&nbsp;
       if next
         a.btn(role="navigation", href=url_for(next), title=page.next.title)!= __("next_post")
