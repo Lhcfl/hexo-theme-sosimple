@@ -1,4 +1,4 @@
-import type * as Hexo from "hexo/dist/types";
+import type * as Hexo from 'hexo/dist/types';
 
 export type HexoLocale = Hexo.LocalsType;
 

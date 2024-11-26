@@ -8,11 +8,7 @@
     "lineEnding": "lf",
     "lineWidth": 120,
     "attributePosition": "auto",
-    "ignore": [
-      "**/*.min.js",
-      "**/*.min.css",
-      "source/js_complied"
-    ]
+    "ignore": ["**/*.min.js", "**/*.min.css", "**/*.jsx", "tsconfig.*.json", "source/js_complied"]
   },
   "organizeImports": {
     "enabled": true
@@ -35,11 +31,7 @@
         "useJsxKeyInIterable": "off"
       }
     },
-    "ignore": [
-      "**/*.min.js",
-      "**/*.min.css",
-      "source/js_complied"
-    ]
+    "ignore": ["**/*.min.js", "**/*.min.css", "**/*.jsx", "tsconfig.*.json", "source/js_complied"]
   },
   "javascript": {
     "formatter": {

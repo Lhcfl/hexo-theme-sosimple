@@ -1,5 +1,4 @@
 function compile(data) {
-
   return function render(locals) {
     const Component = require(data.path);
     let renderedHTML = Component(locals);
@@ -20,4 +19,4 @@ renderer.disableNunjucks = true;
 /** @param {import("hexo")} hexo */
 module.exports = (hexo) => {
   hexo.extend.renderer.register('jsx', 'html', renderer, true);
-}
+};
