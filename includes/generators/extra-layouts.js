@@ -13,7 +13,7 @@ module.exports = (hexo) => {
     }),
   }));
 
-  hexo.extend.generator.register('tags', (locals) => ({
+  hexo.extend.generator.register('categories', (locals) => ({
     path: 'categories/',
     layout: ['categories'],
     data: Object.assign({}, locals, {
