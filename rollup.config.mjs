@@ -3,6 +3,35 @@ import sass from 'rollup-plugin-sass';
 import { defineConfig } from 'rollup';
 import swc from 'unplugin-swc';
 
+const layouts = ["index", "post", "page"].map(layout => ({
+  input: `layout_src/${layout}.tsx`,
+  output: {
+    name: `${layout}.jsx`,
+    file: `layout/${layout}.jsx`,
+    format: "cjs",
+  },
+  plugins: [
+    resolve(),
+    swc.rollup({
+      minify: false,
+      jsc: {
+        // minify: {
+        //   compress: false,
+        // },
+        baseUrl: import.meta.dirname || '.',
+        paths: {
+          '@/*': ['./layout_src/*'],
+        },
+        transform: {
+          react: {
+            pragma: "h"
+          }
+        }
+      },
+    }),
+  ]
+}))
+
 export default defineConfig([
   // browser-friendly UMD build
   {
@@ -29,28 +58,5 @@ export default defineConfig([
       }),
     ],
   },
-  {
-    input: "layout_src/index.tsx",
-    output: {
-      name: "index.jsx",
-      file: "layout/index.jsx",
-      format: "cjs",
-    },
-    plugins: [
-      resolve(),
-      swc.rollup({
-        jsc: {
-          baseUrl: import.meta.dirname || '.',
-          paths: {
-            '@/*': ['./layout_src/*'],
-          },
-          transform: {
-            react: {
-              pragma: "h"
-            }
-          }
-        },
-      }),
-    ]
-  }
+  ...layouts
 ]);

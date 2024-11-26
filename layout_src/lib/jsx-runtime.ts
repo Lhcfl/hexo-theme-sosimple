@@ -1,7 +1,11 @@
+import type { HexoLocale } from "./hexo-data";
+
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 type Attrs = Record<string, any> | null;
 
 type ContentNode = string | null | undefined;
+
+export type Component<Attrs = { hexo: HexoLocale }> = (attrs: Attrs, ...content: ContentNode[]) => string
 
 const SELF_CLOSING = [
   "area",
@@ -37,21 +41,38 @@ export function escapeHtml(str?: string) {
     .replace(/"/g, "&quot;");
 }
 
-export function h(tagName: string, attrs: Attrs, ...content: ContentNode[]) {
+function h_str(tagName: string, attrs: Attrs, ...content: ContentNode[]) {
   tagName = tagName.toLowerCase();
   let str = `<${tagName}`;
 
   if (attrs != null) {
     for (const [key, val] of Object.entries(attrs)) {
-      str += ` ${key}="${escapeAttr(val)}"`;
+      if (val === true) {
+        str += ` ${key}`;
+      } else if (val == null) {
+        // continue
+      } else {
+        str += ` ${key}="${escapeAttr(String(val))}"`;
+      }
     }
   }
 
   if (SELF_CLOSING.includes(tagName)) {
     str += ">";
   } else {
-    str += `>${content.join("")}</${tagName}>`;
+    str += `>${content.flat().join("")}</${tagName}>`;
   }
+
+  return str;
+}
+
+export function h(
+  elem: string | Component<any>,
+  attrs: Attrs,
+  ...content: ContentNode[]
+) {
+
+  const str = typeof elem === "string" ? h_str(elem, attrs, ...content) : elem(attrs, ...content)
 
   return str;
 }
