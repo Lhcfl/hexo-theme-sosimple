@@ -15,7 +15,7 @@ export const GitalkComment: Component<{ hexo: HexoLocale; item: PageSchema | Pos
     repo: gitalk.repo,
     owner: gitalk.owner,
     admin: gitalk.admin,
-    id: `RE: ${item.title || item.source} ${hexo.date(item.date, 'YYYY-MM-DD')}`.slice(0, 49),
+    id: (item.title || item.source || 'undefined').slice(0, 49),
     distractionFreeMode: gitalk.distractionFreeMode,
   });
 
