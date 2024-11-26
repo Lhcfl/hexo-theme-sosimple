@@ -1,7 +1,6 @@
-import { h, escapeHtml, type Component } from '@/lib/jsx-runtime';
+import { h, type Component } from '@/lib/jsx-runtime';
 import type { HexoLocale } from '@/lib/hexo-data';
-import { PostMeta } from './post-meta';
-import { AsRecord, getThemeConfig, isPostPage, withPrevNext } from '@/lib/types-trick';
+import { isPostPage, withPrevNext } from '@/lib/types-trick';
 import type { PageSchema, PostSchema } from 'hexo/dist/types';
 import { i18n } from '@/lib/i18n';
 

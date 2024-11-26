@@ -10,13 +10,14 @@ export const PostList: Component<{ hexo: HexoLocale; item: PostSchema | PageSche
     const itemYear = hexo.date(item.date, 'YYYY');
     const yearElem = itemYear !== lastYear ? <h2>{itemYear}</h2> : null;
     lastYear = itemYear;
+    const title = item.title || hexo.date(item.date, 'YYYY-MM-DD');
     return (
       <template>
         {yearElem}
         <p class="post-list-item">
           <span class="date">{hexo.date(item.date, 'MM-DD ')}</span>
           <a href={hexo.url_for(item.path!)} title={item.title}>
-            {escapeHtml(item.title)}
+            {escapeHtml(title)}
           </a>
         </p>
       </template>

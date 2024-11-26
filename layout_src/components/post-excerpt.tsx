@@ -10,11 +10,12 @@ export const PostExcerpt: Component<{ hexo: HexoLocale; item: PostSchema | PageS
   const excerpt = theme.style.post_excerpt.summary_mode
     ? itemSummary || hexo.strip_html(item.excerpt || item.content).slice(0, 160)
     : item.excerpt || itemSummary || item.content;
+  const title = item.title || hexo.date(item.date, 'YYYY-MM-DD');
   return (
     <div class="post-container post-excerpt">
       <div class="post-title">
         <h3>
-          <a href={hexo.url_for(item.path!)}>{escapeHtml(item.title)}</a>
+          <a href={hexo.url_for(item.path!)}>{escapeHtml(title)}</a>
         </h3>
       </div>
       <PostMeta hexo={hexo} item={item} />

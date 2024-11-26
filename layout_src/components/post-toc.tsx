@@ -1,9 +1,8 @@
-import { withHexoData } from '@/lib/hexo-data';
-import { h, escapeHtml, type Component } from '@/lib/jsx-runtime';
+import { h, type Component } from '@/lib/jsx-runtime';
 import type { HexoLocale } from '@/lib/hexo-data';
-import { AsRecord, getThemeConfig, withTagsCategories } from '@/lib/types-trick';
+import { AsRecord, getThemeConfig } from '@/lib/types-trick';
 import type { PageSchema, PostSchema } from 'hexo/dist/types';
-import { IconSpan } from './icon-span';
+import { i18n } from '@/lib/i18n';
 
 export const PostToc: Component<{ hexo: HexoLocale; item: PageSchema | PostSchema }> = ({ hexo, item }) => {
   if (AsRecord<{ toc?: boolean }>(item).toc && getThemeConfig(hexo).toc_max_depth > 0) {
@@ -15,7 +14,7 @@ export const PostToc: Component<{ hexo: HexoLocale; item: PageSchema | PostSchem
     return (
       <div class="post-toc">
         <details open>
-          <summary>{hexo.__?.('TOC')}</summary>
+          <summary>{i18n(hexo, 'TOC')}</summary>
           <div class="toc">{tocHtml}</div>
         </details>
       </div>

@@ -1,4 +1,3 @@
-import { withHexoData } from '@/lib/hexo-data';
 import { h, escapeHtml, type Component } from '@/lib/jsx-runtime';
 import type { HexoLocale } from '@/lib/hexo-data';
 import { AsRecord, getThemeConfig, withTagsCategories } from '@/lib/types-trick';
