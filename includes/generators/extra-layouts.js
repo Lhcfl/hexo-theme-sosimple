@@ -12,4 +12,12 @@ module.exports = (hexo) => {
       __tags: true,
     }),
   }));
+
+  hexo.extend.generator.register('tags', (locals) => ({
+    path: 'categories/',
+    layout: ['categories'],
+    data: Object.assign({}, locals, {
+      __categories: true,
+    }),
+  }));
 };
