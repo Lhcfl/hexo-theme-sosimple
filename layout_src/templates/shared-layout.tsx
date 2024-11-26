@@ -54,11 +54,11 @@ export const SharedLayout: Component<SharedParam> = (param, ...content) => {
         <meta name="renderer" content="webkit" />
         <link rel="shortcut icon" type="image/x-icon" href={hexo.url_for(hexo.theme.favicon)} />
 
-        <link rel="stylesheet" href="/js_complied/bundle.css" />
+        <link rel="stylesheet" href={hexo.url_for('js_complied/bundle.css')} />
         <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-        <script src="/js_complied/bundle.js" />
+        <script src={hexo.url_for('js_complied/bundle.js')} />
         <script>{lazyLoadCSSScript}</script>
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&amp;family=Noto+Serif+KR:wght@200..900&amp;family=Noto+Serif+SC:wght@200..900&amp;family=Noto+Serif+TC:wght@200..900&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap"
