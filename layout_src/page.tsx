@@ -9,10 +9,8 @@ export default withHexoData((hexo) => {
   const title = `${hexo.page.title} · ${hexo.config.title}`;
 
   return (
-    <SharedLayout hexo={hexo} title={title} description={description}>
-      <div class="post-page">
-        <PostFull hexo={hexo} item={hexo.page} />
-      </div>
+    <SharedLayout hexo={hexo} title={title} description={description} contentClass="post-page page-page">
+      <PostFull hexo={hexo} item={hexo.page} />
     </SharedLayout>
   );
 });

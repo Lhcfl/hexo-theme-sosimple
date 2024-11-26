@@ -43,6 +43,9 @@ export function escapeHtml(str?: string) {
 
 function h_str(tagName: string, attrs: Attrs, ...content: ContentNode[]) {
   tagName = tagName.toLowerCase();
+  if (tagName === "template" && attrs == null) {
+    return content.flat().join("");
+  }
   let str = `<${tagName}`;
 
   if (attrs != null) {
@@ -66,13 +69,16 @@ function h_str(tagName: string, attrs: Attrs, ...content: ContentNode[]) {
   return str;
 }
 
-export function h(
-  elem: string | Component<any>,
-  attrs: Attrs,
+export function h<T>(elem: Component<T>, attrs: T, ...content: ContentNode[]): string;
+export function h(elem: string, attrs: Attrs, ...content: ContentNode[]): string;
+
+export function h<T>(
+  elem: string | Component<T>,
+  attrs: typeof elem extends string ? Attrs : T,
   ...content: ContentNode[]
 ) {
 
-  const str = typeof elem === "string" ? h_str(elem, attrs, ...content) : elem(attrs, ...content)
+  const str = typeof elem === "string" ? h_str(elem, attrs as never, ...content) : elem(attrs, ...content)
 
   return str;
 }

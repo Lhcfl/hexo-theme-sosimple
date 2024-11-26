@@ -10,6 +10,7 @@ export type SharedParam = {
   title?: string;
   description?: string;
   hexo: HexoLocale;
+  contentClass?: string;
 };
 
 export const SharedLayout: Component<SharedParam> = (param, ...content) => {
@@ -65,7 +66,7 @@ export const SharedLayout: Component<SharedParam> = (param, ...content) => {
         <link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" />
         <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
       </head>
-      <body>
+      <body class={param.contentClass}>
         <noscript>
           <link rel="stylesheet" href={hexo.url_for('css/font-awesome.min.css')} />
           <link

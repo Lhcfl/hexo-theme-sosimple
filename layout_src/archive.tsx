@@ -2,16 +2,18 @@ import { withHexoData } from './lib/hexo-data';
 import { h } from './lib/jsx-runtime';
 import { PostFull } from './components/post-full';
 import { SharedLayout } from './shared';
+import { i18n } from './lib/i18n';
 import { PaginationPager } from './components/pagintion-pager';
+import { PostList } from './components/post-list';
 
 export default withHexoData((hexo) => {
-  const description =
-    hexo.page.description || hexo.strip_html(hexo.page.content).replace(/^\s*/, '').replace(/\s*$/, '').slice(0, 150);
-  const title = `${hexo.page.title} · ${hexo.config.title}`;
+  const title = `${i18n(hexo, 'Archives')} · ${hexo.config.title}`;
+  const description = title;
 
   return (
-    <SharedLayout hexo={hexo} title={title} description={description} contentClass="post-page">
-      <PostFull hexo={hexo} item={hexo.page} />
+    <SharedLayout hexo={hexo} title={title} description={description} contentClass="archive-page">
+      <h1>{i18n(hexo, 'Archives')}</h1>
+      <PostList hexo={hexo} item={hexo.page} />
       <PaginationPager hexo={hexo} item={hexo.page} />
     </SharedLayout>
   );

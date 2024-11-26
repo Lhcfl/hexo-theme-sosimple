@@ -16,7 +16,7 @@ export default withHexoData((hexo) => {
     (x: PageSchema) => x.source === 'index.md',
   );
   return (
-    <SharedLayout hexo={hexo}>
+    <SharedLayout hexo={hexo} contentClass="index-page">
       <div class="post-container index-post">
         <h1>{escapeHtml(hexo.config.title)}</h1>
         {theme.description ? (

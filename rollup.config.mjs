@@ -3,7 +3,17 @@ import sass from 'rollup-plugin-sass';
 import { defineConfig } from 'rollup';
 import swc from 'unplugin-swc';
 
-const layouts = ["index", "post", "page"].map(layout => ({
+const layouts = [
+  "index",
+  "post",
+  "page",
+  "archive",
+  "tag",
+  "tags",
+  "category",
+  "categories",
+  "search"
+].map(layout => ({
   input: `layout_src/${layout}.tsx`,
   output: {
     name: `${layout}.jsx`,
@@ -51,6 +61,11 @@ export default defineConfig([
           paths: {
             '@/*': ['./src/*'],
           },
+          transform: {
+            react: {
+              pragma: "h"
+            }
+          }
         },
       }),
       sass({
