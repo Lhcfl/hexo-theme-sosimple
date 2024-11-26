@@ -3,6 +3,7 @@ import './scss/blog_basic.scss';
 import './scss/highlight.scss';
 import './scss/hljs.scss';
 import './scss/style.scss';
+import './scss/gitalk.scss';
 
 import { SoSimple } from './sosimple/sosimple';
 import * as Utils from './utils/main';

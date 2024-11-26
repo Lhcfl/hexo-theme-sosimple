@@ -21,7 +21,7 @@ export const GitalkComment: Component<{ hexo: HexoLocale; item: PageSchema | Pos
 
   return (
     <div class="comment-container">
-      <script>Utils.loadCSS("https://unpkg.com/gitalk/dist/gitalk.css");</script>
+      {/* <script>Utils.loadCSS("https://unpkg.com/gitalk/dist/gitalk.css");</script> */}
       <script
         defer
         src="https://unpkg.com/gitalk/dist/gitalk.min.js"
