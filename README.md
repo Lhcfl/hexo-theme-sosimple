@@ -39,7 +39,7 @@ git pull origin main
 - `.github`: GitHub CI config file
 - `includes`: Hexo scripts
 - `languages`: I18n files
-- `layout`: Pug templates, will render to HTML
+- `layout_src`: TSX templates, will render to HTML
 - `scripts`: Hexo scripts
 - `source`: HTML assets
 - `src`: Typescript and SCSS source dir. It will `rollup` into `js/complied/bundle.js` and `bundle.css`

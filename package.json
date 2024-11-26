@@ -3,19 +3,18 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "format:pretty": "prettier --write ./{layout,src}/**/*.{pug,scss} && prettier --write ./*.{yml,md}",
-    "format:biome": "biome format --write includes languages scripts source src .",
-    "lint": "biome lint --write includes languages scripts source src . && eslint --fix .",
-    "lint:test": "biome lint includes languages scripts source src . && eslint . && pnpm types:check",
+    "format:pretty": "prettier --write ./{layout_src,src}/**/*.{pug,scss} && prettier --write ./*.{yml,md}",
+    "format:biome": "biome format --write includes languages scripts source src layout_src .",
+    "lint": "biome lint --write includes languages scripts source src layout_src . && eslint --fix .",
+    "lint:test": "biome lint includes languages scripts source src layout_src . && eslint . && pnpm types:check",
     "types:check": "tsc --noEmit",
-    "format:test": "biome format includes languages scripts source src . && prettier -c ./{layout,src}/**/*.{pug,scss}",
+    "format:test": "biome format includes languages scripts source src layout_src . && prettier -c ./{layout,src}/**/*.{pug,scss}",
     "format": "pnpm format:biome && pnpm format:pretty",
     "watch": "rollup -w -c ./rollup.config.mjs",
     "build": "rollup -c ./rollup.config.mjs"
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
-    "hexo-renderer-pug": "^0.0.5",
     "rollup": "^4.21.2",
     "rollup-plugin-sass": "^1.13.2",
     "typescript": "^5.5.4"

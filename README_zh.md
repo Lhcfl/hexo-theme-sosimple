@@ -54,7 +54,7 @@ pnpm i
 - `.github`: GitHub 的 CI 配置文件，用于自动部署样例
 - `includes`: 主题内置的 Hexo 脚本
 - `languages`: I18n 文件
-- `layout` 主题使用的模板，在服务端（也就是 `hexo g`）渲染成最后的 HTML
+- `layout_src` 主题使用的模板，在服务端（也就是 `hexo g`）渲染成最后的 HTML
 - `scripts`: 主题内置的 Hexo 脚本
 - `source`: 主题需要的HTML资产
 - `src`: 主题前端相关的 typescript 脚本。这些脚本会被 `rollup` 打包并压缩成一个 `js/complied/bundle.js` 和 `bundle.css`
