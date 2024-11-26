@@ -37,7 +37,7 @@ export const SharedLayout: Component<SharedParam> = (param, ...content) => {
       <head>
         <meta charset="utf-8" />
         <meta name="X-UA-Compatible" content="IE=edge" />
-        <meta name="author" content="Linca" />
+        <meta name="author" content={theme.author} />
 
         <title>{escapeHtml(param.title)}</title>
 
@@ -60,13 +60,6 @@ export const SharedLayout: Component<SharedParam> = (param, ...content) => {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
         <script src={hexo.url_for('js_complied/bundle.js')} />
         <script>{lazyLoadCSSScript}</script>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&amp;family=Noto+Serif+KR:wght@200..900&amp;family=Noto+Serif+SC:wght@200..900&amp;family=Noto+Serif+TC:wght@200..900&amp;family=Noto+Serif:ital,wght@0,100..900;1,100..900&amp;display=swap"
-          rel="stylesheet"
-          type="text/css"
-        />
-        <link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" />
-        <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
       </head>
       <body class={param.contentClass}>
         <noscript>
