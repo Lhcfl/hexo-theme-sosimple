@@ -8,6 +8,10 @@ jobs:
   build_unit_test_blog:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/checkout@v4
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -24,17 +28,16 @@ jobs:
           cd ~/unit_test/themes/SoSimple
           pnpm i
           cd /home/runner/work/hexo-theme-sosimple/hexo-theme-sosimple
-          cp ./config.example.yml ~/unit_test/themes/SoSimple/_config.yml
-          cp ./.github/asserts/hexo_config.yml ~/unit_test/_config.yml
-          cp ./.github/asserts/_posts/* ~/unit_test/source/_posts/
+          cp ./_config.example.yml ~/unit_test/themes/SoSimple/_config.yml
+          cp ./.github/assets/hexo_config.yml ~/unit_test/_config.yml
+          cp ./.github/assets/_posts/* ~/unit_test/source/_posts/
           cd ~/unit_test
           npm install
           npm install hexo-renderer-pug --save
-          npm install hexo-renderer-stylus --save
           npx hexo new "SoSimple简介"
           cat /home/runner/work/hexo-theme-sosimple/hexo-theme-sosimple/README.md >> ./source/_posts/SoSimple简介.md
 
-      - name: Generate Test
+      - name: Generate Test # 生成 Hexo 单元测试
         run: |
           cd ~/unit_test
-          npx hexo g -b
+          npx hexo generate --bail
