@@ -3,6 +3,7 @@ import { h } from './lib/jsx-runtime';
 import { PostFull } from './components/post-full';
 import { SharedLayout } from './templates/shared-layout';
 import { PaginationPager } from './components/pagintion-pager';
+import { Comment } from './components/comment';
 
 export default withHexoData((hexo) => {
   const description =
@@ -13,6 +14,7 @@ export default withHexoData((hexo) => {
     <SharedLayout hexo={hexo} title={title} description={description} contentClass="post-page">
       <PostFull hexo={hexo} item={hexo.page} />
       <PaginationPager hexo={hexo} item={hexo.page} />
+      <Comment hexo={hexo} item={hexo.page} />
     </SharedLayout>
   );
 });

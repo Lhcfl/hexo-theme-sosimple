@@ -28,3 +28,14 @@ style:
   post_meta:
     date_format: 'YYYY-MM-DD'
     show_icon: true
+
+comment:
+  enable: # gitalk
+  gitalk:
+    clientID: string
+    clientSecret: string
+    repo: string,
+    owner: string,
+    admin:
+      - string[],
+    distractionFreeMode: false

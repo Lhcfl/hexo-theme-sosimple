@@ -32,4 +32,16 @@ export type ThemeConfig = {
       show_icon: boolean;
     };
   };
+
+  comment?: {
+    enable?: 'gitalk';
+    gitalk?: {
+      clientID: string;
+      clientSecret: string;
+      repo: string;
+      owner: string;
+      admin: string[];
+      distractionFreeMode?: boolean;
+    };
+  };
 };

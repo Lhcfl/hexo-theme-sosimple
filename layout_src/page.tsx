@@ -2,6 +2,7 @@ import { withHexoData } from './lib/hexo-data';
 import { h } from './lib/jsx-runtime';
 import { PostFull } from './components/post-full';
 import { SharedLayout } from './templates/shared-layout';
+import { Comment } from './components/comment';
 
 export default withHexoData((hexo) => {
   const description =
@@ -11,6 +12,7 @@ export default withHexoData((hexo) => {
   return (
     <SharedLayout hexo={hexo} title={title} description={description} contentClass="post-page page-page">
       <PostFull hexo={hexo} item={hexo.page} />
+      <Comment hexo={hexo} item={hexo.page} />
     </SharedLayout>
   );
 });
