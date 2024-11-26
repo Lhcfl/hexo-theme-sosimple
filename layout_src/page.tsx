@@ -1,7 +1,7 @@
 import { withHexoData } from './lib/hexo-data';
 import { h } from './lib/jsx-runtime';
 import { PostFull } from './components/post-full';
-import { SharedLayout } from './shared';
+import { SharedLayout } from './templates/shared-layout';
 
 export default withHexoData((hexo) => {
   const description =

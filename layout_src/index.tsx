@@ -1,7 +1,7 @@
 import type { PageSchema, PostSchema } from 'hexo/dist/types';
 import { withHexoData } from './lib/hexo-data';
 import { escapeHtml, h } from './lib/jsx-runtime';
-import { SharedLayout } from './shared';
+import { SharedLayout } from './templates/shared-layout';
 import { AsRecord, getThemeConfig } from './lib/types-trick';
 import { PostExcerpt } from './components/post-excerpt';
 import { PaginationPager } from './components/pagintion-pager';
