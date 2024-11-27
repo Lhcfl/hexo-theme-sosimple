@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "format:pretty": "prettier --write ./src/**/*.scss && prettier --write ./*.{yml,md}",
-    "format:biome": "biome format --write includes languages scripts source src .",
-    "lint": "biome lint --write includes languages scripts source src . && eslint --fix .",
-    "lint:test": "biome lint includes languages scripts source src . && eslint . && pnpm types:check",
+    "format:biome": "biome format --write .",
+    "lint": "biome lint --write . && eslint --fix .",
+    "lint:test": "biome lint . && eslint . && pnpm types:check",
     "types:check": "tsc --noEmit",
-    "format:test": "biome format includes languages scripts source src . && prettier -c ./src/**/*.scss",
+    "format:test": "biome format . && prettier -c ./src/**/*.scss",
     "format": "pnpm format:biome && pnpm format:pretty",
     "watch": "rollup -w -c ./rollup.config.mjs",
-    "build": "rollup -c ./rollup.config.mjs"
+    "build": "rollup -c ./rollup.config.mjs",
+    "build-hexo-scripts": "rollup -c ./rollup.hexo.config.mjs"
   },
   "dependencies": {
     "@rollup/plugin-node-resolve": "^15.2.3",
@@ -22,6 +23,8 @@
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@swc/core": "^1.7.23",
+    "@types/hexo-util": "^0.6.8",
+    "@types/node": "^22.10.0",
     "eslint": "^9.4.0",
     "fuse.js": "^7.0.0",
     "globals": "^15.12.0",

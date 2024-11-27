@@ -7,6 +7,7 @@ import { Component } from './base';
 import { router } from '@/sosimple/router';
 import type { SearchResourceCollection, SearchResource, SearchResourcePage } from '@/types/search';
 import { h } from '@/utils/main';
+import { SiteStatic } from '@/sosimple/site-static';
 
 const SEARCH_RESULT_LIMIT = 10;
 
@@ -109,6 +110,7 @@ export class SoSimpleSearch extends Component {
   }
 
   makeSearchItem(icon: string | null, title: string | null, slug: string | null, preview: string | null, url: string) {
+    url = SiteStatic.url_for(url);
     return (
       <div
         class="ins-selectable ins-search-item"
