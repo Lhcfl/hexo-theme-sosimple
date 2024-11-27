@@ -2,14 +2,14 @@ const defaultThemeConfig = {
   keywords: 'blog',
   author: 'you',
   description: '',
-  defaultTheme: 'light-mode',
+  defaultTheme: 'light',
 };
 
 export type ThemeConfig = {
   keywords: string;
   author: string;
   description?: string;
-  defaultTheme: string;
+  defaultTheme: "light" | "dark" | undefined;
 
   favicon: string;
 
