@@ -1,6 +1,6 @@
 import type { CategorySchema, PageSchema, PostSchema, TagSchema } from 'hexo/dist/types';
 import type { HexoLocale } from './hexo-data';
-import type { ThemeConfig } from '@/lib/theme-config';
+import type { ThemeConfig } from '@@/shared/define-config';
 
 // biome-ignore lint/suspicious/noExplicitAny: <explanation>
 export function AsRecord<T = Record<string, any>>(page: PageSchema | PostSchema) {

@@ -10,7 +10,7 @@ export default defineConfig([
       file: 'dist/index.js',
       format: 'cjs',
     },
-    external: ['hexo-util'],
+    external: ['hexo-util', 'jsonschema'],
     plugins: [
       resolve(),
       swc.rollup({
