@@ -1,20 +1,28 @@
-<div style="text-align: center">
+<div align="center">
 
 **So Simple!**
 
 ![Preview](https://i.ibb.co/0qfvTnN/image.png)
+**Minimalist, fast, morden, full-featured hexo theme**
+[![Build](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml) [![Format](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml)
 
 </div>
 
+hexo-theme-sosimple is a minimalist theme.
+
 Live Demo: https://lhcfl.github.io/hexo-theme-sosimple/
 
-[![Build](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml) [![Format](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml) [中文](./README_zh.md)
+- 📄 **Minimalist**: No fancy animations, dedicated to providing the purest page style.
 
-Super clean theme, aiming to write as little CSS as possible and show the original HTML style. The theme is optimized for no CSS and no JavaScript to ensure that it can be displayed normally under pure HTML. You can even just copy the entire page and paste it into a Markdown editor with the nice formatting kept :\).
+- ⏱ **Super Speed**: Only 22.5 kB compressed javascript and css files, provides the fastest DOMContentLoaded speed.
 
-Simple but modern, full-featured. Supports automatic generating TOC, built-in full-text fuzzy search, dark/light mode switching etc.
+- 💻 **Morden**: Use modern template language and complete type annotations to provide a better development experience, with ten-years-ahead-of-hexo technology stack.
 
-## Install
+- 😎 **Geek**: Optimized for no CSS and no JavaScript to ensure that it can be displayed normally under pure HTML. You can even just copy the entire page and paste it into a Markdown editor with the nice formatting kept :\)
+
+- ✨ **Full Featured**: Supports automatic generating TOC, built-in full-text fuzzy search, dark/light mode switching, comments, and etc.
+
+## Installation
 
 ```bash
 git clone https://github.com/Lhcfl/hexo-theme-sosimple.git themes/SoSimple
@@ -36,13 +44,13 @@ git pull origin main
 
 ## Development
 
+### Structures
+
 - `.github`: GitHub CI config file
-- `includes`: Hexo scripts
 - `languages`: I18n files
-- `layout_src`: TSX templates, will render to HTML
 - `scripts`: Hexo scripts
 - `source`: HTML assets
-- `src`: Typescript and SCSS source dir. It will `rollup` into `js/complied/bundle.js` and `bundle.css`
+- `src`: Typescript and SCSS source dir.
 
 ### Formatting
 
