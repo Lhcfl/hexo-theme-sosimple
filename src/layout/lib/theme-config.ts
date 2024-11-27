@@ -9,7 +9,7 @@ export type ThemeConfig = {
   keywords: string;
   author: string;
   description?: string;
-  defaultTheme: "light" | "dark" | undefined;
+  defaultTheme: 'light' | 'dark' | undefined;
 
   favicon: string;
 

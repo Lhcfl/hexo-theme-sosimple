@@ -5,7 +5,7 @@ import swc from 'unplugin-swc';
 
 const layouts = ['index', 'post', 'page', 'archive', 'tag', 'tags', 'category', 'categories', 'search'].map(
   (layout) => ({
-    input: `layout_src/${layout}.tsx`,
+    input: `src/layout/${layout}.tsx`,
     output: {
       name: `${layout}.jsx`,
       file: `layout/${layout}.jsx`,
@@ -21,7 +21,7 @@ const layouts = ['index', 'post', 'page', 'archive', 'tag', 'tags', 'category', 
           // },
           baseUrl: import.meta.dirname || '.',
           paths: {
-            '@/*': ['./layout_src/*'],
+            '@/*': ['./src/layout/*'],
           },
           transform: {
             react: {
@@ -37,11 +37,10 @@ const layouts = ['index', 'post', 'page', 'archive', 'tag', 'tags', 'category', 
 export default defineConfig([
   // browser-friendly UMD build
   {
-    input: 'src/main.ts',
+    input: 'src/web/main.ts',
     output: {
       name: 'main.js',
       file: 'source/js_complied/bundle.js',
-      // format: 'umd',
       format: 'umd',
     },
     plugins: [
@@ -51,7 +50,7 @@ export default defineConfig([
         jsc: {
           baseUrl: import.meta.dirname || '.',
           paths: {
-            '@/*': ['./src/*'],
+            '@/*': ['./src/web/*'],
           },
           transform: {
             react: {
