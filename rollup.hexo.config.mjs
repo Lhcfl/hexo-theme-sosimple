@@ -19,6 +19,7 @@ export default defineConfig([
           baseUrl: import.meta.dirname || '.',
           paths: {
             '@/*': ['./src/hexo/*'],
+            '@@/*': ['./src/*'],
           },
         },
       }),

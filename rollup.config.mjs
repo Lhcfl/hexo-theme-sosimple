@@ -22,6 +22,7 @@ const layouts = ['index', 'post', 'page', 'archive', 'tag', 'tags', 'category', 
           baseUrl: import.meta.dirname || '.',
           paths: {
             '@/*': ['./src/layout/*'],
+            '@@/*': ['./src/*'],
           },
           transform: {
             react: {
