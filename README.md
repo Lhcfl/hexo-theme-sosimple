@@ -2,8 +2,8 @@
 
 **So Simple!**
 
-![Preview](https://i.ibb.co/0qfvTnN/image.png)
-**Minimalist, fast, morden, full-featured hexo theme**
+![Preview](https://i.ibb.co/0qfvTnN/image.png)  
+**Minimalist, fast, morden, full-featured hexo theme**  
 [![Build](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/test_and_build.yml) [![Format](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml/badge.svg)](https://github.com/Lhcfl/hexo-theme-sosimple/actions/workflows/format_test.yml)
 
 </div>
