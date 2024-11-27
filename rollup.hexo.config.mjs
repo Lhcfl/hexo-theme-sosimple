@@ -7,9 +7,10 @@ export default defineConfig([
     input: 'src/hexo/index.ts',
     output: {
       name: 'main.js',
-      file: 'scripts/index.js',
+      file: 'dist/index.js',
       format: 'cjs',
     },
+    external: ['hexo-util'],
     plugins: [
       resolve(),
       swc.rollup({

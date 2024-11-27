@@ -3,7 +3,7 @@
 /**
  * @type {import('prettier').Options}
  */
-module.exports = {
+export default {
   plugins: [],
   printWidth: 120,
   singleQuote: true,
@@ -11,5 +11,4 @@ module.exports = {
   tabWidth: 2,
   trailingComma: 'all',
   endOfLine: 'lf',
-  // ... more pug* options
 };

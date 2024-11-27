@@ -9,6 +9,7 @@ export default [
         ...globals.browser,
         ...globals.commonjs,
         hexo: 'readonly',
+        __dirname: 'readonly',
       },
     },
   },
