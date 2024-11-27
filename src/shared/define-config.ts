@@ -53,7 +53,7 @@ export const themeConfigSchema = defineSchema({
     comment: {
       type: 'object',
       properties: {
-        enable: { enum: ['gitalk'], default: '' },
+        enable: { anyOf: [{ enum: ['gitalk', ''] }, { type: 'null' }] },
         gitalk: {
           type: 'object',
           properties: {
