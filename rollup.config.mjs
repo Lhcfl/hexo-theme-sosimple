@@ -44,6 +44,7 @@ export default defineConfig([
       file: 'source/js_complied/bundle.js',
       format: 'umd',
     },
+    external: ["https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs"],
     plugins: [
       resolve(), // so Rollup can find `ms`
       swc.rollup({
