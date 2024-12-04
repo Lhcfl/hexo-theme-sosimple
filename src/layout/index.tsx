@@ -26,9 +26,11 @@ export default withHexoData((hexo) => {
         ) : null}
         {index_page?.content && <div class="index-content">{index_page.content}</div>}
       </div>
-      {page_posts.map((item) => (
-        <PostExcerpt hexo={hexo} item={item} />
-      ))}
+      {page_posts
+        .filter((item) => item.hidden != true)
+        .map((item) => (
+          <PostExcerpt hexo={hexo} item={item} />
+        ))}
       <PaginationPager hexo={hexo} item={hexo.page} />
     </SharedLayout>
   );
