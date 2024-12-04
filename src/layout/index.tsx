@@ -27,7 +27,7 @@ export default withHexoData((hexo) => {
         {index_page?.content && <div class="index-content">{index_page.content}</div>}
       </div>
       {page_posts
-        .filter((item) => item.hidden != true)
+        .filter((item) => item.hidden !== true)
         .map((item) => (
           <PostExcerpt hexo={hexo} item={item} />
         ))}
