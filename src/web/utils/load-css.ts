@@ -1,7 +1,5 @@
+import { h } from './jsx-runtime';
+
 export function loadCSS(url: string) {
-  const css = document.createElement('link');
-  css.href = url;
-  css.rel = 'stylesheet';
-  css.type = 'text/css';
-  document.getElementsByTagName('head')[0].appendChild(css);
+  document.head.append(h('link', { rel: 'stylesheet', type: 'text/css', href: url }));
 }

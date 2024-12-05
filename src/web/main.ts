@@ -14,3 +14,4 @@ import * as Utils from '@/utils/main';
 (window as any).Utils = Utils;
 
 import '@/scripts/make-code-name';
+import '@/scripts/pretty-print';

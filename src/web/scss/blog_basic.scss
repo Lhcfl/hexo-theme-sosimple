@@ -7,14 +7,19 @@
 :root {
   --mono-font-face: 'mononoki', 'Consolas', 'Roboto Mono', 'Lucida Console', 'Trebuchet MS', 'Courier New', 'courier',
     monospace;
+  --normal-font-face: 'Noto Serif', 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif JP', 'Noto Serif KR',
+    'Times New Roman', Times, serif;
+}
+
+html {
+  font-size: 15px;
 }
 
 body {
   padding: 1em;
   line-height: 1.6em;
-  font-family: 'Noto Serif', 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif JP', 'Noto Serif KR', 'Times New Roman',
-    Times, serif;
-  font-size: 15px;
+  font-family: var(--normal-font-face);
+  font-size: 1em;
   color: var(--primary);
   background-color: var(--secondary);
 }

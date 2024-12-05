@@ -1,0 +1,25 @@
+@media print {
+  html {
+    font-size: 12px;
+  }
+  .comment-container,
+  .pagination,
+  footer .powered_by {
+    display: none;
+  }
+}
+@page {
+  margin: 20mm;
+  @bottom-center {
+    content: counter(page);
+    font-size: 12px;
+    font-family: var(--normal-font-face);
+  }
+}
+@page:first {
+  @top-left {
+    content: var(--page-url);
+    font-size: 12px;
+    font-family: var(--normal-font-face);
+  }
+}
