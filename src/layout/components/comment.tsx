@@ -7,6 +7,9 @@ import { i18n } from '@/lib/i18n';
 
 export const Comment: Component<{ hexo: HexoLocale; item: PageSchema | PostSchema }> = ({ hexo, item }) => {
   let comment_body = '';
+  if (item.comments === false) {
+    return '';
+  }
   if (getThemeConfig(hexo).comment?.enable === 'gitalk') {
     comment_body = <GitalkComment hexo={hexo} item={item} />;
   } else {
