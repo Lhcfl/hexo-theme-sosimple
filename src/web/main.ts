@@ -15,3 +15,4 @@ import * as Utils from '@/utils/main';
 
 import '@/scripts/make-code-name';
 import '@/scripts/pretty-print';
+import '@/scripts/load-font';
