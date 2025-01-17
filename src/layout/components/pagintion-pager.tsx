@@ -37,7 +37,7 @@ export const PaginationPager: Component<{ hexo: HexoLocale; item: PostSchema | P
       ];
 
   return (
-    <footer class="pagination">
+    <p class="pagination">
       {prev.item ? (
         <a href={hexo.url_for(prev.link)} title={prev.title}>
           {prev.translation}
@@ -49,6 +49,6 @@ export const PaginationPager: Component<{ hexo: HexoLocale; item: PostSchema | P
           {next.translation}
         </a>
       ) : null}
-    </footer>
+    </p>
   );
 };
