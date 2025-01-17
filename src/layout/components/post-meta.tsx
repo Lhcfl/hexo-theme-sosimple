@@ -6,7 +6,7 @@ import { IconSpan } from './icon-span';
 import { PostToc } from './post-toc';
 
 export const PostMeta: Component<{ hexo: HexoLocale; item: PageSchema | PostSchema }> = ({ hexo, item }) => (
-  <div class="post-meta">
+  <section class="post-meta">
     <IconSpan hexo={hexo} icon="fa-calendar">
       <span class="date">{hexo.date(item.date, getThemeConfig(hexo).style.post_meta.date_format)}</span>
     </IconSpan>
@@ -24,5 +24,5 @@ export const PostMeta: Component<{ hexo: HexoLocale; item: PageSchema | PostSche
         </a>
       </IconSpan>
     ))}
-  </div>
+  </section>
 );

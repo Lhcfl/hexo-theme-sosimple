@@ -17,7 +17,7 @@ export default withHexoData((hexo) => {
   );
   return (
     <SharedLayout hexo={hexo} contentClass="index-page">
-      <div class="post-container index-post">
+      <header class="post-container index-post">
         <h1>{escapeHtml(hexo.config.title)}</h1>
         {theme.description ? (
           <div class="description">
@@ -25,7 +25,7 @@ export default withHexoData((hexo) => {
           </div>
         ) : null}
         {index_page?.content && <div class="index-content">{index_page.content}</div>}
-      </div>
+      </header>
       {page_posts
         .filter((item) => item.hidden !== true)
         .map((item) => (

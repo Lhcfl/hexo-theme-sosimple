@@ -7,16 +7,16 @@ import { titleHTML } from '@/lib/page-custom';
 
 export const PostFull: Component<{ hexo: HexoLocale; item: PostSchema | PageSchema }> = ({ hexo, item }) => {
   return (
-    <div class="post-container post-full">
-      <div class="post-title">
+    <article class="post-container post-full">
+      <header class="post-title">
         <h1>{titleHTML(item)}</h1>
-      </div>
+      </header>
 
       <PostToc hexo={hexo} item={item} />
 
-      <div class="post-body">{item.content}</div>
+      <section class="post-body">{item.content}</section>
 
       <PostMeta hexo={hexo} item={item} />
-    </div>
+    </article>
   );
 };

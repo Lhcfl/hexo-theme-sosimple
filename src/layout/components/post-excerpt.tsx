@@ -12,14 +12,14 @@ export const PostExcerpt: Component<{ hexo: HexoLocale; item: PostSchema | PageS
     ? itemSummary || hexo.strip_html(item.excerpt || item.content).slice(0, 160)
     : item.excerpt || itemSummary || item.content;
   return (
-    <div class="post-container post-excerpt">
-      <div class="post-title">
+    <article class="post-container post-excerpt">
+      <header class="post-title">
         <h3>
           <a href={hexo.url_for(item.path!)}>{titleHTML(item, hexo.date(item.date, 'YYYY-MM-DD'))}</a>
         </h3>
-      </div>
+      </header>
       <PostMeta hexo={hexo} item={item} />
-      <div class="post-body">{excerpt}</div>
-    </div>
+      <section class="post-body">{excerpt}</section>
+    </article>
   );
 };

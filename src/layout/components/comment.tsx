@@ -16,9 +16,9 @@ export const Comment: Component<{ hexo: HexoLocale; item: PageSchema | PostSchem
     return '';
   }
   return (
-    <div class="comment-container">
+    <article class="comment-container">
       {/* <h3>{i18n(hexo, 'Comments')}</h3> */}
       {comment_body}
-    </div>
+    </article>
   );
 };

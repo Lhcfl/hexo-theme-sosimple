@@ -12,12 +12,12 @@ export const PostToc: Component<{ hexo: HexoLocale; item: PageSchema | PostSchem
       max_depth: getThemeConfig(hexo).toc_max_depth,
     });
     return (
-      <div class="post-toc">
+      <section class="post-toc">
         <details open>
           <summary>{i18n(hexo, 'TOC')}</summary>
           <div class="toc">{tocHtml}</div>
         </details>
-      </div>
+      </section>
     );
   }
   return '';
