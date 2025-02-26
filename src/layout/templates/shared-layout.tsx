@@ -70,7 +70,7 @@ export const SharedLayout: Component<SharedParam> = (param, ...content) => {
 
         <Nav hexo={hexo} />
 
-        <div class="main">{...content}</div>
+        <main class="main">{...content}</main>
 
         <Footer hexo={hexo} />
       </body>
