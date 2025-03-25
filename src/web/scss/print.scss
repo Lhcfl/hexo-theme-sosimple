@@ -10,6 +10,10 @@
   .header-anchor {
     display: none;
   }
+  pre > code {
+    border-top: 1px solid var(--primary-300);
+    border-bottom: 1px solid var(--primary-300);
+  }
 }
 @page {
   margin: 20mm;
