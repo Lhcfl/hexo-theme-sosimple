@@ -28,6 +28,10 @@ style:
   post_meta:
     date_format: 'YYYY-MM-DD'
     show_icon: true
+  fonts: # 前面写字体名，后面写对应 CSS 的链接
+    {
+      "'Noto Serif', 'Noto Serif SC', 'Noto Serif TC', 'Noto Serif JP', 'Noto Serif KR'": 'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif+TC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap',
+    }
 
 comment:
   enable: # gitalk

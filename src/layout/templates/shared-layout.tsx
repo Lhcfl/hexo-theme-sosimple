@@ -24,8 +24,11 @@ export const SharedLayout: Component<SharedParam> = (param, ...content) => {
     hexo.page.tags?.data?.map((t: TagSchema) => t.name)?.join(',') ||
     hexo.theme.keywords;
 
+  const fontCss = Object.values(theme.style.fonts ?? {}).map((x) => x);
+  const fonts = Object.keys(theme.style.fonts ?? {});
+
   const lazyLoadCSSs = [
-    'https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Noto+Serif+KR:wght@200..900&family=Noto+Serif+SC:wght@200..900&family=Noto+Serif+TC:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap',
+    ...fontCss,
     'https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css',
     hexo.url_for('css/font-awesome.min.css'),
   ];
@@ -58,6 +61,11 @@ export const SharedLayout: Component<SharedParam> = (param, ...content) => {
         <link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+
+        {fonts.length > 0 ? (
+          <style>:root &#123; --normal-font-face: {fonts.join(', ')}, 'Times New Roman', Times, serif; &#125;</style>
+        ) : null}
+
         <script src={hexo.url_for('js_complied/bundle.js')} />
         <script>{lazyLoadCSSScript}</script>
       </head>

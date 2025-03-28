@@ -47,6 +47,12 @@ export const themeConfigSchema = defineSchema({
             show_icon: { type: ['boolean', 'null'], default: true },
           },
         },
+        fonts: {
+          type: 'object',
+          additionalProperties: {
+            type: 'string',
+          },
+        },
       },
       required: ['post_excerpt', 'post_meta'],
     },
